@@ -14,7 +14,9 @@ services:
       - pgdata:/var/lib/postgresql/data
 
   backend:
-    build: ./backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     container_name: clinic-backend
     ports:
       - "8080:8080"
@@ -27,10 +29,18 @@ services:
       - db
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     container_name: clinic-frontend
+    command: npm start
     ports:
-      - "3000:80"
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app        # Mappa il codice locale nel container
+      - /app/node_modules      # Evita conflitti tra moduli host e container
+    environment:
+      - CHOKIDAR_USEPOLLING=true  # Abilita hot reload in ambienti Docker Desktop (Windows/Mac)
     depends_on:
       - backend
 
