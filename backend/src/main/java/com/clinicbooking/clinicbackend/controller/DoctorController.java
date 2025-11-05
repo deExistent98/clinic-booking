@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/doctors")
-@CrossOrigin(origins = "*")
+
 @Tag(name = "Medici", description = "Gestione dei medici, delle loro specializzazioni e disponibilità")
 public class DoctorController {
 

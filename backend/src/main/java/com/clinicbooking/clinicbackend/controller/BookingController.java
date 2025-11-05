@@ -17,7 +17,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/bookings")
-@CrossOrigin(origins = "*")
+
 @Tag(name = "Prenotazioni", description = "Gestione delle prenotazioni mediche (creazione, aggiornamento, cancellazione)")
 public class BookingController {
 
