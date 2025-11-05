@@ -30,12 +30,17 @@ Il progetto è stato interamente containerizzato con **Docker**, per eseguire fa
 
 ## 🧩 Architettura del Progetto
 
-clinic-booking/
-├── backend/ → API REST Spring Boot
-├── frontend/ → Applicazione React
-├── docs/ → Documentazione e diagrammi
-├── docker-compose.yml
-└── README.md
+    clinic-booking/
+
+    ├── backend/ → API REST Spring Boot
+
+    ├── frontend/ → Applicazione React
+
+    ├── docs/ → Documentazione e diagrammi
+
+    ├── docker-compose.yml
+
+    └── README.md
 
 
 ## 🐳 Deploy con Docker
@@ -52,33 +57,23 @@ Backend → http://localhost:8080
 
 Database → localhost:5432 (utente: postgres, password: postgres)
 
-##  ⚙️ Avvio manuale (senza Docker)
-In alternativa, puoi eseguire i servizi manualmente:
-
-🔹 Backend (Spring Boot)
-bash
-Copia codice
-cd backend
-mvn spring-boot:run
-🔹 Frontend (React)
-bash
-Copia codice
-cd frontend
-npm install
-npm start
-
 
 ##  📋 Funzionalità Principali
 
 ✅ CRUD completo per:
 
 Utenti (creazione, modifica, eliminazione)
+
 Medici (anagrafica e specializzazione)
+
 Prenotazioni (stato: “In attesa”, “Completata”, “Cancellata”)
 
 ✅ Dashboard di riepilogo
+
 ✅ Interfaccia con badge colorati per lo stato prenotazione
+
 ✅ Tema dinamico (chiaro/scuro)
+
 ✅ Integrazione backend–frontend tramite REST API
 
 ## 🧠 Documentazione API (Swagger)
@@ -89,9 +84,8 @@ Swagger UI è disponibile all’indirizzo:
 ## 🧱 Struttura dei Container
 Ogni servizio è containerizzato tramite Docker:
 
-## 🧩 Servizio	  Porta locale	🐳 Docker Image
-PostgreSQL	        5432	        postgres:15
-Backend API	        8080	        clinic-booking-backend
-Frontend	        3000	        clinic-booking-frontend
-
+      Servizio 	        Porta locale	      Docker Image
+        PostgreSQL	        5432	           postgres:15
+        Backend API	        8080	        clinic-booking-backend
+        Frontend	        3000	        clinic-booking-frontend
 
