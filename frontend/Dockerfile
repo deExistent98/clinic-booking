@@ -1,4 +1,6 @@
-# Fase 1: build del progetto React
+# ==============================
+# STAGE 1 — Build del progetto React
+# ==============================
 FROM node:18 AS build
 WORKDIR /app
 COPY package*.json ./
@@ -6,8 +8,12 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-# Fase 2: serve i file statici con Nginx
-FROM nginx:alpine
+# ==============================
+# STAGE 2 — Server di produzione (Nginx)
+# ==============================
+FROM nginx:stable-alpine
+RUN rm -rf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/build /usr/share/nginx/html
-EXPOSE 3000
+EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

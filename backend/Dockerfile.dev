@@ -1,0 +1,14 @@
+# Usa Java 21
+FROM maven:3.9-eclipse-temurin-21
+
+WORKDIR /app
+
+# Copia pom.xml e scarica le dipendenze
+COPY pom.xml .
+RUN mvn dependency:go-offline
+
+# Copia tutto il codice
+COPY . .
+
+# Avvia Spring Boot in modalità sviluppo
+CMD ["mvn", "spring-boot:run"]

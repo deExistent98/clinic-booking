@@ -3,7 +3,7 @@ version: "3.9"
 services:
   db:
     image: postgres:15
-    container_name: clinic-db
+    container_name: clinic-db-dev
     environment:
       POSTGRES_USER: clinic_user
       POSTGRES_PASSWORD: clinic_pass
@@ -14,8 +14,10 @@ services:
       - pgdata:/var/lib/postgresql/data
 
   backend:
-    build: ./backend
-    container_name: clinic-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    container_name: clinic-backend-dev
     ports:
       - "8080:8080"
     environment:
@@ -23,17 +25,25 @@ services:
       SPRING_DATASOURCE_USERNAME: clinic_user
       SPRING_DATASOURCE_PASSWORD: clinic_pass
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    volumes:
+      - ./backend:/app
     depends_on:
       - db
 
   frontend:
-    build: ./frontend
-    container_name: clinic-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    container_name: clinic-frontend-dev
     ports:
-      - "3000:80"
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
     depends_on:
       - backend
-    restart: always
 
 volumes:
   pgdata:
