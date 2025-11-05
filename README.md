@@ -85,7 +85,7 @@ Swagger UI è disponibile all’indirizzo:
 Ogni servizio è containerizzato tramite Docker:
 
       Servizio 	        Porta locale	      Docker Image
-        PostgreSQL	        5432	           postgres:15
-        Backend API	        8080	        clinic-booking-backend
-        Frontend	        3000	        clinic-booking-frontend
+      PostgreSQL	        5432	           postgres:15
+      Backend API	        8080	        clinic-booking-backend
+      Frontend	            3000	        clinic-booking-frontend
 
