@@ -94,8 +94,18 @@ function BookingList() {
   };
 
   // 🔹 Avvia modifica
-  const startEditBooking = (b) =>
-    setEditingBooking({ ...b, userId: b.user?.id || "", doctorId: b.doctor?.id || "" });
+  const startEditBooking = (b) => {
+    setEditingBooking({
+      id: b.id,
+      userId: b.user?.id || "",
+      doctorId: b.doctor?.id || "",
+      date: b.date || "",
+      timeSlot: b.timeSlot || "",
+      status: b.status || "In attesa",
+      notes: b.notes || "",
+    });
+  };
+
 
   // 🔹 Salva modifica
   const handleUpdateBooking = async (e) => {
