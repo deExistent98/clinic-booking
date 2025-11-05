@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0d6efd" />
+    <meta name="description" content="Gestione prenotazioni clinica privata" />
+
+    <!-- ✅ Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- ✅ Temi chiaro/scuro -->
+    <style>
+      :root {
+        color-scheme: light dark;
+        transition: background-color 0.4s, color 0.4s;
+      }
+
+      body[data-theme="light"] {
+        background-color: #f8f9fa;
+        color: #212529;
+      }
+
+      body[data-theme="dark"] {
+        background-color: #121212;
+        color: #f5f5f5;
+      }
+
+      body[data-theme="dark"] .navbar {
+        background-color: #1e1e1e !important;
+      }
+
+      body[data-theme="dark"] .card,
+      body[data-theme="dark"] .table,
+      body[data-theme="dark"] .form-control,
+      body[data-theme="dark"] .form-select {
+        background-color: #1a1a1a !important;
+        color: #fff !important;
+        border-color: #333 !important;
+      }
+
+      body[data-theme="dark"] .table thead {
+        background-color: #2a2a2a !important;
+      }
+
+      body[data-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      body[data-theme="dark"] a,
+      body[data-theme="dark"] .btn-link {
+        color: #66b2ff !important;
+      }
+
+      body[data-theme="dark"] .btn-primary {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+      }
+
+      /* 📱 Responsive ottimizzato */
+      @media (max-width: 768px) {
+        h2,
+        h5 {
+          font-size: 1.2rem;
+          text-align: center;
+        }
+
+        .table {
+          font-size: 0.9rem;
+        }
+
+        .container {
+          padding: 0.5rem;
+        }
+
+        .card {
+          padding: 1rem !important;
+        }
+      }
+    </style>
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>🏥 Gestione Clinica</title>
+  </head>
+
+  <body>
+    <noscript>Devi abilitare JavaScript per visualizzare questa app.</noscript>
+    <div id="root"></div>
+
+    <!-- ✅ Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
