@@ -125,11 +125,6 @@ function BookingList() {
 
   return (
     <div className="container mt-4">
-      {/* 🔙 Pulsante Home */}
-      <div className="mb-3">
-       
-      </div>
-
       <h2 className="mb-3">📅 Gestione Prenotazioni</h2>
 
       {message && <div className="alert alert-info text-center">{message}</div>}
@@ -335,7 +330,7 @@ function BookingList() {
         </div>
       )}
 
-            {/* 🔹 SEZIONE MODIFICA PRENOTAZIONE */}
+      {/* 🔹 SEZIONE MODIFICA PRENOTAZIONE */}
       {editingBooking && (
         <div className="card p-3 mt-4 bg-light border border-primary">
           <h5 className="mb-3">
@@ -343,7 +338,93 @@ function BookingList() {
           </h5>
           <form onSubmit={handleUpdateBooking}>
             <div className="row g-3">
-              {/* ... campi modifica ... */}
+              <div className="col-md-3">
+                <label className="form-label">Utente</label>
+                <select
+                  className="form-select"
+                  value={editingBooking.userId}
+                  onChange={(e) =>
+                    setEditingBooking({ ...editingBooking, userId: e.target.value })
+                  }
+                >
+                  <option value="">-- Seleziona --</option>
+                  {users.map((u) => (
+                    <option key={u.id} value={u.id}>
+                      {u.fullName}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="col-md-3">
+                <label className="form-label">Medico</label>
+                <select
+                  className="form-select"
+                  value={editingBooking.doctorId}
+                  onChange={(e) =>
+                    setEditingBooking({ ...editingBooking, doctorId: e.target.value })
+                  }
+                >
+                  <option value="">-- Seleziona --</option>
+                  {doctors.map((d) => (
+                    <option key={d.id} value={d.id}>
+                      {d.firstName} {d.lastName} ({d.specialty})
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="col-md-2">
+                <label className="form-label">Data</label>
+                <input
+                  type="date"
+                  className="form-control"
+                  value={editingBooking.date}
+                  onChange={(e) =>
+                    setEditingBooking({ ...editingBooking, date: e.target.value })
+                  }
+                />
+              </div>
+
+              <div className="col-md-2">
+                <label className="form-label">Orario</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Es. 10:00-10:30"
+                  value={editingBooking.timeSlot}
+                  onChange={(e) =>
+                    setEditingBooking({ ...editingBooking, timeSlot: e.target.value })
+                  }
+                />
+              </div>
+
+              <div className="col-md-2">
+                <label className="form-label">Stato</label>
+                <select
+                  className="form-select"
+                  value={editingBooking.status}
+                  onChange={(e) =>
+                    setEditingBooking({ ...editingBooking, status: e.target.value })
+                  }
+                >
+                  <option value="In attesa">In attesa</option>
+                  <option value="Completata">Completata</option>
+                  <option value="Cancellata">Cancellata</option>
+                </select>
+              </div>
+
+              <div className="col-md-12">
+                <label className="form-label">Note</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  value={editingBooking.notes || ""}
+                  onChange={(e) =>
+                    setEditingBooking({ ...editingBooking, notes: e.target.value })
+                  }
+                />
+              </div>
             </div>
 
             <button type="submit" className="btn btn-success mt-3 me-2">
@@ -360,7 +441,6 @@ function BookingList() {
         </div>
       )}
 
-      {/* 🔙 Pulsante Home */}
       <div className="mt-4 text-center">
         <Link to="/" className="btn btn-outline-primary">
           🏠 Torna alla Home
