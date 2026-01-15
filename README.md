@@ -1,7 +1,7 @@
 # 🏥 Clinic Booking
 
 Un’applicazione **full-stack** per la gestione delle prenotazioni in ambito sanitario.  
-Il sistema consente di gestire **utenti, medici e appuntamenti**, con interfaccia moderna e tema chiaro/scuro.  
+Il sistema consente di gestire **utenti, medici e appuntamenti**, con interfaccia moderna.  
 Il progetto è stato interamente containerizzato con **Docker**, per eseguire facilmente frontend, backend e database in ambiente isolato.
 
 ---
