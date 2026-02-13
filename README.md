@@ -92,17 +92,19 @@ Ogni servizio è containerizzato tramite Docker:
 🚀 Sviluppi Futuri (Roadmap)
 Il progetto prevede un'evoluzione modulare basata sulle seguenti tappe:
 
-Breve Termine: Sistema di autenticazione con JWT e notifiche email di conferma.
+✅Breve Termine: Sistema di autenticazione con JWT e notifiche email di conferma.
 
-Medio Termine: Integrazione WebRTC per telemedicina e sincronizzazione con Google Calendar.
-+1
+✅Medio Termine: Integrazione WebRTC per telemedicina e sincronizzazione con Google Calendar.
 
-Lungo Termine: Modulo AI per la predizione dei "no-show" e supporto Multi-Clinica.
+✅Lungo Termine: Modulo AI per la predizione dei "no-show" e supporto Multi-Clinica.
 
+
+
+
+
+Info su di me.
 
 Studente: Stefano Cacucci 
-
 Università: Università Telematica Pegaso 
-
 Corso: Informatica per le Aziende Digitali (L-31)
 
