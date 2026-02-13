@@ -89,6 +89,7 @@ Ogni servizio è containerizzato tramite Docker:
       Backend API	        8080	        clinic-booking-backend
       Frontend	            3000	        clinic-booking-frontend
 
+---
 
 🚀 Sviluppi Futuri 
 Il progetto prevede un'evoluzione modulare basata sulle seguenti tappe:
@@ -102,7 +103,7 @@ Il progetto prevede un'evoluzione modulare basata sulle seguenti tappe:
 
 
 
-
+---
 Info su di me.
 
 Studente: Stefano Cacucci 
