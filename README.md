@@ -89,7 +89,8 @@ Ogni servizio è containerizzato tramite Docker:
       Backend API	        8080	        clinic-booking-backend
       Frontend	            3000	        clinic-booking-frontend
 
-🚀 Sviluppi Futuri (Roadmap)
+
+🚀 Sviluppi Futuri 
 Il progetto prevede un'evoluzione modulare basata sulle seguenti tappe:
 
 ✅Breve Termine: Sistema di autenticazione con JWT e notifiche email di conferma.
