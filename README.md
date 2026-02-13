@@ -89,3 +89,20 @@ Ogni servizio è containerizzato tramite Docker:
       Backend API	        8080	        clinic-booking-backend
       Frontend	            3000	        clinic-booking-frontend
 
+🚀 Sviluppi Futuri (Roadmap)
+Il progetto prevede un'evoluzione modulare basata sulle seguenti tappe:
+
+Breve Termine: Sistema di autenticazione con JWT e notifiche email di conferma.
+
+Medio Termine: Integrazione WebRTC per telemedicina e sincronizzazione con Google Calendar.
++1
+
+Lungo Termine: Modulo AI per la predizione dei "no-show" e supporto Multi-Clinica.
+
+
+Studente: Stefano Cacucci 
+
+Università: Università Telematica Pegaso 
+
+Corso: Informatica per le Aziende Digitali (L-31)
+
