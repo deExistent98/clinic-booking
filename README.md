@@ -6,7 +6,7 @@ Il progetto è stato interamente containerizzato con **Docker**, per eseguire fa
 
 ---
 
-## 🚀 Stack Tecnologico
+##  Stack Tecnologico
 
 ### 🌐 Frontend
 - **React.js** con gestione tema **Light/Dark**
